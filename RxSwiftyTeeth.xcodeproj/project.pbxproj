@@ -15,6 +15,10 @@
 		19EC59CE205C6BD9002F59BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59CC205C6BD9002F59BD /* Main.storyboard */; };
 		19EC59D0205C6BD9002F59BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59CF205C6BD9002F59BD /* Assets.xcassets */; };
 		19EC59D3205C6BD9002F59BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59D1205C6BD9002F59BD /* LaunchScreen.storyboard */; };
+		19EC59DB205C6F8E002F59BD /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59D9205C6F8E002F59BD /* Cartfile.resolved */; };
+		19EC59DC205C6F8E002F59BD /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59DA205C6F8E002F59BD /* Cartfile */; };
+		19EC59DF205C7024002F59BD /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
+		19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,10 @@
 		19EC59CF205C6BD9002F59BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19EC59D2205C6BD9002F59BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19EC59D4205C6BD9002F59BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19EC59D9205C6F8E002F59BD /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		19EC59DA205C6F8E002F59BD /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTeeth.framework; path = Carthage/Build/iOS/SwiftyTeeth.framework; sourceTree = "<group>"; };
+		19EC59E0205C7027002F59BD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EC59DF205C7024002F59BD /* SwiftyTeeth.framework in Frameworks */,
+				19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,10 +82,12 @@
 		19EC599E205C6A39002F59BD = {
 			isa = PBXGroup;
 			children = (
+				19EC59D8205C6F74002F59BD /* Meta */,
 				19EC59AA205C6A39002F59BD /* Sources */,
 				19EC59B5205C6A39002F59BD /* RxSwiftyTeeth Tests */,
 				19EC59C7205C6BD9002F59BD /* RxSwiftyTeeth Sample */,
 				19EC59A9205C6A39002F59BD /* Products */,
+				19EC59DD205C7024002F59BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +132,24 @@
 			path = "RxSwiftyTeeth Sample";
 			sourceTree = "<group>";
 		};
+		19EC59D8205C6F74002F59BD /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				19EC59DA205C6F8E002F59BD /* Cartfile */,
+				19EC59D9205C6F8E002F59BD /* Cartfile.resolved */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
+		19EC59DD205C7024002F59BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19EC59E0205C7027002F59BD /* RxSwift.framework */,
+				19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -142,6 +172,7 @@
 				19EC59A4205C6A39002F59BD /* Frameworks */,
 				19EC59A5205C6A39002F59BD /* Headers */,
 				19EC59A6205C6A39002F59BD /* Resources */,
+				19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EC59DC205C6F8E002F59BD /* Cartfile in Resources */,
+				19EC59DB205C6F8E002F59BD /* Cartfile.resolved in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +290,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTeeth.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19EC59A3205C6A39002F59BD /* Sources */ = {
@@ -435,6 +487,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -455,6 +511,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
