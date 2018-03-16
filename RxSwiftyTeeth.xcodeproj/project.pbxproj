@@ -11,7 +11,6 @@
 		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
 		19EC59B9205C6A39002F59BD /* RxSwiftyTeeth.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19EC59C9205C6BD9002F59BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59C8205C6BD9002F59BD /* AppDelegate.swift */; };
-		19EC59CB205C6BD9002F59BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59CA205C6BD9002F59BD /* ViewController.swift */; };
 		19EC59CE205C6BD9002F59BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59CC205C6BD9002F59BD /* Main.storyboard */; };
 		19EC59D0205C6BD9002F59BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59CF205C6BD9002F59BD /* Assets.xcassets */; };
 		19EC59D3205C6BD9002F59BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59D1205C6BD9002F59BD /* LaunchScreen.storyboard */; };
@@ -19,6 +18,8 @@
 		19EC59DC205C6F8E002F59BD /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59DA205C6F8E002F59BD /* Cartfile */; };
 		19EC59DF205C7024002F59BD /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
 		19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
+		19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E4205C760F002F59BD /* DeviceListViewController.swift */; };
+		19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E5205C760F002F59BD /* DeviceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		19EC59B8205C6A39002F59BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19EC59C6205C6BD9002F59BD /* RxSwiftyTeeth Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwiftyTeeth Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EC59C8205C6BD9002F59BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19EC59CA205C6BD9002F59BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19EC59CD205C6BD9002F59BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19EC59CF205C6BD9002F59BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19EC59D2205C6BD9002F59BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		19EC59DA205C6F8E002F59BD /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTeeth.framework; path = Carthage/Build/iOS/SwiftyTeeth.framework; sourceTree = "<group>"; };
 		19EC59E0205C7027002F59BD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		19EC59E4205C760F002F59BD /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		19EC59E5205C760F002F59BD /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +124,8 @@
 		19EC59C7205C6BD9002F59BD /* RxSwiftyTeeth Sample */ = {
 			isa = PBXGroup;
 			children = (
+				19EC59E3205C760F002F59BD /* UI */,
 				19EC59C8205C6BD9002F59BD /* AppDelegate.swift */,
-				19EC59CA205C6BD9002F59BD /* ViewController.swift */,
 				19EC59CC205C6BD9002F59BD /* Main.storyboard */,
 				19EC59CF205C6BD9002F59BD /* Assets.xcassets */,
 				19EC59D1205C6BD9002F59BD /* LaunchScreen.storyboard */,
@@ -148,6 +150,15 @@
 				19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19EC59E3205C760F002F59BD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				19EC59E4205C760F002F59BD /* DeviceListViewController.swift */,
+				19EC59E5205C760F002F59BD /* DeviceViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EC59CB205C6BD9002F59BD /* ViewController.swift in Sources */,
+				19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */,
 				19EC59C9205C6BD9002F59BD /* AppDelegate.swift in Sources */,
+				19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
