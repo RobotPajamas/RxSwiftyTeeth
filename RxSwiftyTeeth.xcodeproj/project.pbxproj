@@ -20,6 +20,7 @@
 		19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
 		19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E4205C760F002F59BD /* DeviceListViewController.swift */; };
 		19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E5205C760F002F59BD /* DeviceViewController.swift */; };
+		19EC59E9205C76DE002F59BD /* RxSwiftyTeeth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		19EC59E0205C7027002F59BD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		19EC59E4205C760F002F59BD /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		19EC59E5205C760F002F59BD /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftyTeeth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		19EC59AA205C6A39002F59BD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */,
 				19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */,
 				19EC59AC205C6A39002F59BD /* Info.plist */,
 			);
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EC59E9205C76DE002F59BD /* RxSwiftyTeeth.swift in Sources */,
 				19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */,
 				19EC59C9205C6BD9002F59BD /* AppDelegate.swift in Sources */,
 				19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */,

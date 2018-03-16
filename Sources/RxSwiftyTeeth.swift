@@ -1,6 +1,6 @@
 //
 //  RxSwiftyTeeth.swift
-//  SwiftyTeeth iOS
+//  RxSwiftyTeeth
 //
 //  Created by Suresh Joshi on 2018-03-16.
 //
