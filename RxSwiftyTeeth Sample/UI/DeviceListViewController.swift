@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwiftyTeeth
 import SwiftyTeeth
 import RxSwift
 
@@ -26,7 +27,7 @@ class DeviceListViewController: UITableViewController {
 
 // MARK: - SwiftyTeethable
 extension DeviceListViewController: SwiftyTeethable {
-    func scanTapped() {
+    @objc func scanTapped() {
         swiftyTeeth.rx.scan()
             .debug()
             .observeOn(MainScheduler.instance)

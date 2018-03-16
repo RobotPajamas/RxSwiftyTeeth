@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import SwiftyTeeth
 
 public extension Reactive where Base: SwiftyTeeth {
     func scan() -> Observable<Device> {
