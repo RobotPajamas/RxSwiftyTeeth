@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AA14EE205C828D002B3D19 /* RxSwiftyTeeth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */; };
 		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
 		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
 		19EC59B9205C6A39002F59BD /* RxSwiftyTeeth.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -354,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AA14EE205C828D002B3D19 /* RxSwiftyTeeth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +578,7 @@
 		19EC59C0205C6A39002F59BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftyTeethTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -589,6 +592,7 @@
 		19EC59C1205C6A39002F59BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftyTeethTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -602,6 +606,7 @@
 		19EC59D6205C6BD9002F59BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -621,6 +626,7 @@
 		19EC59D7205C6BD9002F59BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";

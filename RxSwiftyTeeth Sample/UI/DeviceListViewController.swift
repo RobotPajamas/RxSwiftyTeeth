@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import RxSwiftyTeeth
 import SwiftyTeeth
 import RxSwift
+import RxSwiftyTeeth
 
 class DeviceListViewController: UITableViewController {
     
@@ -30,9 +30,11 @@ extension DeviceListViewController: SwiftyTeethable {
     @objc func scanTapped() {
         swiftyTeeth.rx.scan()
             .debug()
+            .do(onNext: { (device) in
+                self.devices.append(device)
+            })
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (device) in
-                self.devices.append(device)
                 self.tableView.reloadData()
             })
             .disposed(by: self.disposeBag)
