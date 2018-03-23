@@ -40,7 +40,7 @@ final class DeviceViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         let readRequest = input.readTapped
             .flatMapFirst({ (_) -> Driver<Data> in
-                return input.peripheral.rx.read(from: "", in: "")
+                return input.peripheral.rx.read(from: "2a24", in: "180a")
                     .asDriver(onErrorJustReturn: Data())
             })
         
@@ -52,7 +52,7 @@ final class DeviceViewModel: ViewModelType {
         
         let subscribeRequest = input.subscribeTapped
             .flatMapFirst({ (_) -> Driver<Data> in
-                return input.peripheral.rx.subscribe(to: "", in: "")
+                return input.peripheral.rx.subscribe(to: "2a37", in: "180d")
                     .asDriver(onErrorJustReturn: Data())
             })
         

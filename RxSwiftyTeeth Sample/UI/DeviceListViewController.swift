@@ -15,12 +15,17 @@ class DeviceListViewController: UITableViewController {
     
     fileprivate var devices = [Device]()
     static let segue = "goToDevice"
-    fileprivate let disposeBag = DisposeBag()
+    fileprivate var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let scanButton = UIBarButtonItem(title: "Scan", style: .plain, target: self, action: #selector(scanTapped))
         self.navigationItem.rightBarButtonItem = scanButton
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        disposeBag = DisposeBag()
     }
 }
 
