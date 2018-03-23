@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		19270A7D20653D9300A178F6 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19270A7C20653D9300A178F6 /* DeviceViewModel.swift */; };
 		19270A802065400300A178F6 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19270A7F2065400300A178F6 /* ViewModelType.swift */; };
+		19270A86206575D300A178F6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19270A812065753A00A178F6 /* RxCocoa.framework */; };
+		19270A87206575D500A178F6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
+		19270A88206575D900A178F6 /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
+		19270A8A2065764200A178F6 /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
+		19270A8B2065764200A178F6 /* RxSwiftyTeeth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19AA14EE205C828D002B3D19 /* RxSwiftyTeeth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */; };
 		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
 		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
@@ -23,19 +28,17 @@
 		19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
 		19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E4205C760F002F59BD /* DeviceListViewController.swift */; };
 		19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E5205C760F002F59BD /* DeviceViewController.swift */; };
-		19EC59ED205C7B3D002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
-		19EC59EE205C7B3D002F59BD /* RxSwiftyTeeth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */ = {
+		19270A8C2065764200A178F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19EC599F205C6A39002F59BD /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 19EC59A7205C6A39002F59BD;
 			remoteInfo = RxSwiftyTeeth;
 		};
-		19EC59EF205C7B3D002F59BD /* PBXContainerItemProxy */ = {
+		19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19EC599F205C6A39002F59BD /* Project object */;
 			proxyType = 1;
@@ -45,13 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		19EC59F1205C7B3D002F59BD /* Embed Frameworks */ = {
+		19270A8E2065764200A178F6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				19EC59EE205C7B3D002F59BD /* RxSwiftyTeeth.framework in Embed Frameworks */,
+				19270A8B2065764200A178F6 /* RxSwiftyTeeth.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +64,7 @@
 /* Begin PBXFileReference section */
 		19270A7C20653D9300A178F6 /* DeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 		19270A7F2065400300A178F6 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		19270A812065753A00A178F6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../../ACS/acs-emu-ios/Carthage/Build/iOS/RxCocoa.framework"; sourceTree = "<group>"; };
 		19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftyTeeth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftyTeeth.h; sourceTree = "<group>"; };
 		19EC59AC205C6A39002F59BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +108,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EC59ED205C7B3D002F59BD /* RxSwiftyTeeth.framework in Frameworks */,
+				19270A86206575D300A178F6 /* RxCocoa.framework in Frameworks */,
+				19270A8A2065764200A178F6 /* RxSwiftyTeeth.framework in Frameworks */,
+				19270A87206575D500A178F6 /* RxSwift.framework in Frameworks */,
+				19270A88206575D900A178F6 /* SwiftyTeeth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +193,7 @@
 		19EC59DD205C7024002F59BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19270A812065753A00A178F6 /* RxCocoa.framework */,
 				19EC59E0205C7027002F59BD /* RxSwift.framework */,
 				19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */,
 			);
@@ -260,12 +268,13 @@
 				19EC59C2205C6BD9002F59BD /* Sources */,
 				19EC59C3205C6BD9002F59BD /* Frameworks */,
 				19EC59C4205C6BD9002F59BD /* Resources */,
-				19EC59F1205C7B3D002F59BD /* Embed Frameworks */,
+				19270A892065760700A178F6 /* Carthage Copy Frameworks */,
+				19270A8E2065764200A178F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				19EC59F0205C7B3D002F59BD /* PBXTargetDependency */,
+				19270A8D2065764200A178F6 /* PBXTargetDependency */,
 			);
 			name = "RxSwiftyTeeth Sample";
 			productName = "RxSwiftyTeeth Sample";
@@ -346,6 +355,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		19270A892065760700A178F6 /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTeeth.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,15 +422,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		19270A8D2065764200A178F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
+			targetProxy = 19270A8C2065764200A178F6 /* PBXContainerItemProxy */;
+		};
 		19EC59B4205C6A39002F59BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
 			targetProxy = 19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */;
-		};
-		19EC59F0205C7B3D002F59BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
-			targetProxy = 19EC59EF205C7B3D002F59BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
