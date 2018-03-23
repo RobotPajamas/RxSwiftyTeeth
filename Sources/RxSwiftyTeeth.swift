@@ -76,6 +76,7 @@ public extension Reactive where Base: Device {
         })
     }
     
+    // TODO: Handle write-no-response
     func write(data: Data, to characteristic: String, in service: String) -> Observable<Void> {
         return Observable.create({ (observer) -> Disposable in
             self.base.write(data: data, to: characteristic, in: service, complete: { (error) in
@@ -90,7 +91,7 @@ public extension Reactive where Base: Device {
         })
     }
     
-    func observe(characteristic: String, in service: String) -> Observable<Data> {
+    func subscribe(to characteristic: String, in service: String) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
             self.base.subscribe(to: characteristic, in: service, complete: { (data, error) in
                 if data != nil {

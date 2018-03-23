@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19270A7D20653D9300A178F6 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19270A7C20653D9300A178F6 /* DeviceViewModel.swift */; };
+		19270A802065400300A178F6 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19270A7F2065400300A178F6 /* ViewModelType.swift */; };
 		19AA14EE205C828D002B3D19 /* RxSwiftyTeeth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */; };
 		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
 		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		19270A7C20653D9300A178F6 /* DeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
+		19270A7F2065400300A178F6 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftyTeeth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftyTeeth.h; sourceTree = "<group>"; };
 		19EC59AC205C6A39002F59BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19270A7E20653FF900A178F6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				19270A7F2065400300A178F6 /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		19EC599E205C6A39002F59BD = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +163,7 @@
 		19EC59C7205C6BD9002F59BD /* RxSwiftyTeeth Sample */ = {
 			isa = PBXGroup;
 			children = (
+				19270A7E20653FF900A178F6 /* Protocols */,
 				19EC59E3205C760F002F59BD /* UI */,
 				19EC59C8205C6BD9002F59BD /* AppDelegate.swift */,
 				19EC59CC205C6BD9002F59BD /* Main.storyboard */,
@@ -184,6 +197,7 @@
 			children = (
 				19EC59E4205C760F002F59BD /* DeviceListViewController.swift */,
 				19EC59E5205C760F002F59BD /* DeviceViewController.swift */,
+				19270A7C20653D9300A178F6 /* DeviceViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -371,8 +385,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19270A7D20653D9300A178F6 /* DeviceViewModel.swift in Sources */,
 				19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */,
 				19EC59C9205C6BD9002F59BD /* AppDelegate.swift in Sources */,
+				19270A802065400300A178F6 /* ViewModelType.swift in Sources */,
 				19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

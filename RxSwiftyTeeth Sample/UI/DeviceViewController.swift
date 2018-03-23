@@ -19,6 +19,7 @@ class DeviceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let readButton = UIBarButtonItem(title: "Read", style: .plain, target: self, action: #selector(read))
+        
         let subscribeButton = UIBarButtonItem(title: "Subscribe", style: .plain, target: self, action: #selector(subscribe))
         let writeButton = UIBarButtonItem(title: "Write", style: .plain, target: self, action: #selector(write))
         self.navigationItem.rightBarButtonItems = [readButton, subscribeButton, writeButton]
