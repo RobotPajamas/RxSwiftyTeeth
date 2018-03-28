@@ -61,13 +61,13 @@ public extension Reactive where Base: Device {
     // Maybe this should be a Single/Completable vs Observable? 
     func read(from characteristic: String, in service: String) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
-            self.base.read(from: characteristic, in: service, complete: { (data, error) in
-                if data != nil {
-                    observer.onNext(data!)
+            self.base.read(from: characteristic, in: service, complete: { (result) in
+                switch result {
+                case .success(let value):
+                    observer.onNext(value)
                     observer.onCompleted()
-                }
-                if error != nil {
-                    observer.onError(error!)
+                case .failure(let error):
+                    observer.onError(error)
                 }
             })
             
@@ -76,13 +76,16 @@ public extension Reactive where Base: Device {
     }
     
     // TODO: Handle write-no-response
+    // Should be Single<>?
     func write(data: Data, to characteristic: String, in service: String) -> Observable<Void> {
         return Observable.create({ (observer) -> Disposable in
-            self.base.write(data: data, to: characteristic, in: service, complete: { (error) in
-                if error != nil {
-                    observer.onError(error!)
+            self.base.write(data: data, to: characteristic, in: service, complete: { (result) in
+                switch result {
+                case .success:
+                    observer.onCompleted()
+                case .failure(let error):
+                    observer.onError(error)
                 }
-                observer.onCompleted()
             })
             
             return Disposables.create()
@@ -91,12 +94,12 @@ public extension Reactive where Base: Device {
     
     func subscribe(to characteristic: String, in service: String) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
-            self.base.subscribe(to: characteristic, in: service, complete: { (data, error) in
-                if data != nil {
-                    observer.onNext(data!)
-                }
-                if error != nil {
-                    observer.onError(error!)
+            self.base.subscribe(to: characteristic, in: service, complete: { (result) in
+                switch result {
+                case .success(let value):
+                    observer.onNext(value)
+                case .failure(let error):
+                    observer.onError(error)
                 }
             })
             
