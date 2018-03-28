@@ -14,7 +14,7 @@
 		19270A88206575D900A178F6 /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
 		19270A8A2065764200A178F6 /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
 		19270A8B2065764200A178F6 /* RxSwiftyTeeth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		19AA14EE205C828D002B3D19 /* RxSwiftyTeeth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */; };
+		19AA14EE205C828D002B3D19 /* SwiftyTeeth+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* SwiftyTeeth+Rx.swift */; };
 		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
 		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
 		19EC59B9205C6A39002F59BD /* RxSwiftyTeeth.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,7 +83,7 @@
 		19EC59E0205C7027002F59BD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		19EC59E4205C760F002F59BD /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		19EC59E5205C760F002F59BD /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
-		19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftyTeeth.swift; sourceTree = "<group>"; };
+		19EC59E8205C76DE002F59BD /* SwiftyTeeth+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftyTeeth+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 		19EC59AA205C6A39002F59BD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				19EC59E8205C76DE002F59BD /* RxSwiftyTeeth.swift */,
+				19EC59E8205C76DE002F59BD /* SwiftyTeeth+Rx.swift */,
 				19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */,
 				19EC59AC205C6A39002F59BD /* Info.plist */,
 			);
@@ -395,7 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19AA14EE205C828D002B3D19 /* RxSwiftyTeeth.swift in Sources */,
+				19AA14EE205C828D002B3D19 /* SwiftyTeeth+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

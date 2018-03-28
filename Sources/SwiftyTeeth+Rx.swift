@@ -99,7 +99,6 @@ public extension Reactive where Base: Device {
                 }
                 if error != nil {
                     observer.onError(error!)
-//                    observer.onCompleted() TODO?
                 }
             })
             
