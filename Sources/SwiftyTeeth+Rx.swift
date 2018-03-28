@@ -44,8 +44,7 @@ public extension Reactive where Base: Device {
                 observer.onNext(isConnected)
             })
             
-            return Disposables.create {
-            }
+            return Disposables.create()
         })
     }
     
@@ -59,20 +58,20 @@ public extension Reactive where Base: Device {
 //        })
 //    }
     
+    // Maybe this should be a Single/Completable vs Observable? 
     func read(from characteristic: String, in service: String) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
             self.base.read(from: characteristic, in: service, complete: { (data, error) in
                 if data != nil {
                     observer.onNext(data!)
+                    observer.onCompleted()
                 }
                 if error != nil {
                     observer.onError(error!)
                 }
-                observer.onCompleted()
             })
             
-            return Disposables.create {
-            }
+            return Disposables.create()
         })
     }
     
@@ -86,8 +85,7 @@ public extension Reactive where Base: Device {
                 observer.onCompleted()
             })
             
-            return Disposables.create {
-            }
+            return Disposables.create()
         })
     }
     
