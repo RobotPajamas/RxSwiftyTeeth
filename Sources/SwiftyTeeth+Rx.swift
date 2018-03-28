@@ -5,6 +5,7 @@
 //  Created by Suresh Joshi on 2018-03-16.
 //
 
+import CoreBluetooth
 import RxSwift
 import SwiftyTeeth
 
@@ -58,6 +59,42 @@ public extension Reactive where Base: Device {
 //        })
 //    }
     
+    func discoverServices(with uuids: [CBUUID]? = nil) -> Observable<[CBService]> {
+        return Observable.create({ (observer) -> Disposable in
+            self.base.discoverServices(with: uuids, complete: { (result) in
+                switch result {
+                case .success(let value):
+                    observer.onNext(value)
+                    observer.onCompleted()
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            })
+            
+            return Disposables.create {
+                // Cancel
+            }
+        })
+    }
+    
+    func discoverCharacteristics(with uuids: [CBUUID]? = nil, for service: CBService) -> Observable<DiscoveredCharacteristic> {
+        return Observable.create({ (observer) -> Disposable in
+            self.base.discoverCharacteristics(with: uuids, for: service, complete: { (result) in
+                switch result {
+                case .success(let value):
+                    observer.onNext(value)
+                    observer.onCompleted()
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            })
+            
+            return Disposables.create {
+                // Cancel
+            }
+        })
+    }
+    
     // Maybe this should be a Single/Completable vs Observable? 
     func read(from characteristic: String, in service: String) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
@@ -71,7 +108,9 @@ public extension Reactive where Base: Device {
                 }
             })
             
-            return Disposables.create()
+            return Disposables.create {
+                // Cancel
+            }
         })
     }
     
@@ -88,7 +127,9 @@ public extension Reactive where Base: Device {
                 }
             })
             
-            return Disposables.create()
+            return Disposables.create {
+                // Cancel
+            }
         })
     }
     
@@ -104,7 +145,7 @@ public extension Reactive where Base: Device {
             })
             
             return Disposables.create {
-                // TODO: Unsubscribe
+                // TODO: Cancel/Unsubscribe
             }
         })
     }

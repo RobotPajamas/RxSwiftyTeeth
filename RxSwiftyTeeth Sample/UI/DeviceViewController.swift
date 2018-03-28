@@ -10,6 +10,7 @@ import UIKit
 import RxSwiftyTeeth
 import SwiftyTeeth
 import RxSwift
+import CoreBluetooth
 
 class DeviceViewController: UIViewController {
     
@@ -90,7 +91,15 @@ extension DeviceViewController {
             guard isConnected == true else {
                 return
             }
-                
+            
+//            self.device?.rx.discoverServices()
+//                .flatMap({ (services) -> Observable<CBService> in
+//                    Observable.from(services)
+//                })
+//                .flatMap({ (service) -> Observable<DiscoveredCharacteristic> in
+//                    self.device?.rx.discoverCharacteristics(for: service)
+//                })
+            
             self.printUi("App: Device is connected? \(isConnected)")
             print("App: Starting service discovery...")
             self.device?.discoverServices(complete: { result in
