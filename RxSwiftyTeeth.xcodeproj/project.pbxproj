@@ -12,10 +12,10 @@
 		19270A86206575D300A178F6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19270A812065753A00A178F6 /* RxCocoa.framework */; };
 		19270A87206575D500A178F6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
 		19270A88206575D900A178F6 /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
-		19270A8A2065764200A178F6 /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
-		19270A8B2065764200A178F6 /* RxSwiftyTeeth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19270A8A2065764200A178F6 /* RxSwiftyTeeth_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework */; };
+		19270A8B2065764200A178F6 /* RxSwiftyTeeth_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19AA14EE205C828D002B3D19 /* SwiftyTeeth+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E8205C76DE002F59BD /* SwiftyTeeth+Rx.swift */; };
-		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
+		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework */; };
 		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
 		19EC59B9205C6A39002F59BD /* RxSwiftyTeeth.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19EC59C9205C6BD9002F59BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59C8205C6BD9002F59BD /* AppDelegate.swift */; };
@@ -54,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				19270A8B2065764200A178F6 /* RxSwiftyTeeth.framework in Embed Frameworks */,
+				19270A8B2065764200A178F6 /* RxSwiftyTeeth_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +65,7 @@
 		19270A7C20653D9300A178F6 /* DeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 		19270A7F2065400300A178F6 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		19270A812065753A00A178F6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../../ACS/acs-emu-ios/Carthage/Build/iOS/RxCocoa.framework"; sourceTree = "<group>"; };
-		19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftyTeeth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19EC59A8205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftyTeeth_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EC59AB205C6A39002F59BD /* RxSwiftyTeeth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftyTeeth.h; sourceTree = "<group>"; };
 		19EC59AC205C6A39002F59BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19EC59B1205C6A39002F59BD /* RxSwiftyTeeth Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSwiftyTeeth Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */,
+				19EC59B2205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19270A86206575D300A178F6 /* RxCocoa.framework in Frameworks */,
-				19270A8A2065764200A178F6 /* RxSwiftyTeeth.framework in Frameworks */,
+				19270A8A2065764200A178F6 /* RxSwiftyTeeth_iOS.framework in Frameworks */,
 				19270A87206575D500A178F6 /* RxSwift.framework in Frameworks */,
 				19270A88206575D900A178F6 /* SwiftyTeeth.framework in Frameworks */,
 			);
@@ -141,7 +141,7 @@
 		19EC59A9205C6A39002F59BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */,
+				19EC59A8205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework */,
 				19EC59B1205C6A39002F59BD /* RxSwiftyTeeth Tests.xctest */,
 				19EC59C6205C6BD9002F59BD /* RxSwiftyTeeth Sample.app */,
 			);
@@ -224,9 +224,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */ = {
+		19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth" */;
+			buildConfigurationList = 19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth iOS" */;
 			buildPhases = (
 				19EC59A3205C6A39002F59BD /* Sources */,
 				19EC59A4205C6A39002F59BD /* Frameworks */,
@@ -238,9 +238,9 @@
 			);
 			dependencies = (
 			);
-			name = RxSwiftyTeeth;
+			name = "RxSwiftyTeeth iOS";
 			productName = RxSwiftyTeeth;
-			productReference = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */;
+			productReference = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		19EC59B0205C6A39002F59BD /* RxSwiftyTeeth Tests */ = {
@@ -318,7 +318,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */,
+				19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */,
 				19EC59B0205C6A39002F59BD /* RxSwiftyTeeth Tests */,
 				19EC59C5205C6BD9002F59BD /* RxSwiftyTeeth Sample */,
 			);
@@ -424,12 +424,12 @@
 /* Begin PBXTargetDependency section */
 		19270A8D2065764200A178F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
+			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */;
 			targetProxy = 19270A8C2065764200A178F6 /* PBXContainerItemProxy */;
 		};
 		19EC59B4205C6A39002F59BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
+			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */;
 			targetProxy = 19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -586,7 +586,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robotpajamas.RxSwiftyTeeth;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -613,7 +613,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robotpajamas.RxSwiftyTeeth;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -701,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth" */ = {
+		19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19EC59BD205C6A39002F59BD /* Debug */,
