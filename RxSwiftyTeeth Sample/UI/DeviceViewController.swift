@@ -10,6 +10,7 @@ import UIKit
 import RxSwiftyTeeth
 import SwiftyTeeth
 import RxSwift
+import CoreBluetooth
 
 class DeviceViewController: UIViewController {
     
@@ -21,7 +22,7 @@ class DeviceViewController: UIViewController {
     let writeButton = UIBarButtonItem(title: "Write", style: .plain, target: self, action: nil)
     var disposeBag = DisposeBag()
     lazy var vm: DeviceViewModel = {
-        return DeviceViewModel(navigator: self)
+        return DeviceViewModel(navigator: self, screenLogger: self)
     }()
     
     override func viewDidLoad() {
@@ -32,12 +33,19 @@ class DeviceViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         textView.text = ""
-        connect()
         
         let output = vm.transform(input: DeviceViewModel.Input(peripheral: device!,
                                                   readTapped: readButton.rx.tap.asDriver(),
                                                   writeTapped: writeButton.rx.tap.asDriver(),
                                                   subscribeTapped: subscribeButton.rx.tap.asDriver()))
+        
+        output.connection
+            .subscribe(onNext: { (discoveredCharacteristic) in
+                discoveredCharacteristic.characteristics.forEach {
+                    self.printUi("App: Discovered characteristic: \($0.uuid.uuidString) in \(String(describing: discoveredCharacteristic.service.uuid.uuidString))")
+                }
+            })
+            .disposed(by: disposeBag)
         
         output.readRequest
             .drive(onNext: { (data) in
@@ -63,13 +71,6 @@ class DeviceViewController: UIViewController {
         device?.disconnect()
         disposeBag = DisposeBag()
     }
-    
-    private func printUi(_ text: String?) {
-        print(text ?? "")
-        DispatchQueue.main.async {
-            self.textView.text.append((text ?? "") + "\n")
-        }
-    }
 }
 
 // MARK: - Navigator
@@ -79,39 +80,12 @@ extension DeviceViewController: DeviceViewModel.Navigator {
     }
 }
 
-
-// MARK: - SwiftyTeethable
-extension DeviceViewController {
-    
-    // TODO: Make reactive
-    // Connect and iterate through services/characteristics
-    func connect() {
-        device?.connect(complete: { isConnected in
-            guard isConnected == true else {
-                return
-            }
-                
-            self.printUi("App: Device is connected? \(isConnected)")
-            print("App: Starting service discovery...")
-            self.device?.discoverServices(complete: { services, error in
-                services.forEach({
-                    self.printUi("App: Discovering characteristics for service: \($0.uuid.uuidString)")
-                    self.device?.discoverCharacteristics(for: $0, complete: { service, characteristics, error in
-                        characteristics.forEach({
-                            self.printUi("App: Discovered characteristic: \($0.uuid.uuidString) in \(service.uuid.uuidString)")
-                        })
-                        
-                        if service == services.last {
-                            self.printUi("App: All services/characteristics discovered")
-                        }
-                    })
-                })
-            })
-
-        })
-    }
-    
-    func disconnect() {
-        device?.disconnect()
+// MARK: - Screen Logger
+extension DeviceViewController: DeviceViewModel.ScreenLogger {
+    func printUi(_ text: String?) {
+        print(text ?? "")
+        DispatchQueue.main.async {
+            self.textView.text.append((text ?? "") + "\n")
+        }
     }
 }

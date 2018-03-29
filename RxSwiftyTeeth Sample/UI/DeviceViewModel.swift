@@ -6,6 +6,7 @@
 //  Copyright © 2018 Robot Pajamas. All rights reserved.
 //
 
+import CoreBluetooth
 import RxCocoa
 import RxSwift
 import RxSwiftyTeeth
@@ -15,10 +16,17 @@ protocol DeviceViewNavigator {
     func navigateBack()
 }
 
+// TODO: Go back and re-think this part a bit - just hacking this in for the moment
+protocol DeviceViewScreenLogger {
+    func printUi(_ text: String?)
+}
+
 final class DeviceViewModel: ViewModelType {
     typealias Navigator = DeviceViewNavigator
-
+    typealias ScreenLogger = DeviceViewScreenLogger
+    
     private let navigator: Navigator
+    private let screenLogger: ScreenLogger
 
     struct Input {
         let peripheral: Device
@@ -28,36 +36,60 @@ final class DeviceViewModel: ViewModelType {
     }
 
     struct Output {
+        let connection: Observable<DiscoveredCharacteristic>
         let readRequest: Driver<Data>
         let writeRequest: Driver<Void>
         let subscribeRequest: Driver<Data>
     }
 
-    init(navigator: Navigator) {
+    init(navigator: Navigator, screenLogger: ScreenLogger) {
         self.navigator = navigator
+        self.screenLogger = screenLogger
     }
 
     func transform(input: Input) -> Output {
+        let peripheral = input.peripheral
+        
+        let connection = peripheral.rx.connect()
+            .distinctUntilChanged()
+            .do(onNext: { (isConnected) in
+                self.screenLogger.printUi("App: Device is connected? \(isConnected)")
+            })
+            .filter { $0 == true } // On each reconnection, re-discover services/characteristics
+            .flatMap { (_) -> Observable<[CBService]> in
+                self.screenLogger.printUi("App: Starting service discovery...")
+                return peripheral.rx.discoverServices()
+            }
+            .flatMap({ (services) -> Observable<CBService> in
+                Observable.from(services)
+            })
+            .flatMap({ (service) -> Observable<DiscoveredCharacteristic> in
+                self.screenLogger.printUi("App: Discovering characteristics for service: \(service.uuid.uuidString)")
+                return peripheral.rx.discoverCharacteristics(for: service)
+            })
+        
         let readRequest = input.readTapped
             .flatMapFirst({ (_) -> Driver<Data> in
-                return input.peripheral.rx.read(from: "2a24", in: "180a")
+                return peripheral.rx.read(from: "2a24", in: "180a")
                     .asDriver(onErrorJustReturn: Data())
             })
         
         let writeRequest = input.writeTapped
             .flatMapFirst({ (_) -> Driver<Void> in
-                return input.peripheral.rx.write(data: Data(), to: "", in: "")
+                return peripheral.rx.write(data: Data(), to: "", in: "")
                     .asDriver(onErrorJustReturn: ())
             })
         
         let subscribeRequest = input.subscribeTapped
             .flatMapFirst({ (_) -> Driver<Data> in
-                return input.peripheral.rx.subscribe(to: "2a37", in: "180d")
+                return peripheral.rx.subscribe(to: "2a37", in: "180d")
                     .asDriver(onErrorJustReturn: Data())
             })
         
-        return Output(readRequest: readRequest,
-                      writeRequest: writeRequest,
-                      subscribeRequest: subscribeRequest)
+        return Output(
+            connection: connection,
+            readRequest: readRequest,
+            writeRequest: writeRequest,
+            subscribeRequest: subscribeRequest)
     }
 }
