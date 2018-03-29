@@ -33,8 +33,14 @@ class DeviceListViewController: UITableViewController {
 // MARK: - SwiftyTeethable
 extension DeviceListViewController: SwiftyTeethable {
     @objc func scanTapped() {
-        swiftyTeeth.rx.scan()
+        swiftyTeeth.rx.state()
             .debug()
+            .filter { (state) -> Bool in
+                return state == .poweredOn
+            }
+            .flatMap({ (_) -> Observable<Device> in
+                self.swiftyTeeth.rx.scan()
+            })
             .do(onNext: { (device) in
                 self.devices.append(device)
             })

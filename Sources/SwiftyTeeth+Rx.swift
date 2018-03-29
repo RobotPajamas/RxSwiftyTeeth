@@ -10,6 +10,18 @@ import RxSwift
 import SwiftyTeeth
 
 public extension Reactive where Base: SwiftyTeeth {
+    
+    func state() -> Observable<BluetoothState> {
+        return Observable.create({ (observer) -> Disposable in
+            observer.onNext(self.base.state)
+            self.base.stateChangedHandler = { (state) in
+                observer.onNext(state)
+            }
+            
+            return Disposables.create()
+        })
+    }
+    
     func scan() -> Observable<Device> {
         return Observable.create({ (observer) -> Disposable in
             self.base.scan(changes: { (device) in
