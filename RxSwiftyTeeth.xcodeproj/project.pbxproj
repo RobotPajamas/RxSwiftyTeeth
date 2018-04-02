@@ -232,7 +232,6 @@
 				19EC59A4205C6A39002F59BD /* Frameworks */,
 				19EC59A5205C6A39002F59BD /* Headers */,
 				19EC59A6205C6A39002F59BD /* Resources */,
-				19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,22 +363,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTeeth.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-			);
-			name = "Carthage Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTeeth.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
