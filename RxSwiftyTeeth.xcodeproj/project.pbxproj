@@ -224,21 +224,20 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */ = {
+		19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth" */;
+			buildConfigurationList = 19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth iOS" */;
 			buildPhases = (
 				19EC59A3205C6A39002F59BD /* Sources */,
 				19EC59A4205C6A39002F59BD /* Frameworks */,
 				19EC59A5205C6A39002F59BD /* Headers */,
 				19EC59A6205C6A39002F59BD /* Resources */,
-				19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RxSwiftyTeeth;
+			name = "RxSwiftyTeeth iOS";
 			productName = RxSwiftyTeeth;
 			productReference = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */;
 			productType = "com.apple.product-type.framework";
@@ -288,7 +287,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Robot Pajamas";
 				TargetAttributes = {
 					19EC59A7205C6A39002F59BD = {
@@ -318,7 +317,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */,
+				19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */,
 				19EC59B0205C6A39002F59BD /* RxSwiftyTeeth Tests */,
 				19EC59C5205C6BD9002F59BD /* RxSwiftyTeeth Sample */,
 			);
@@ -372,22 +371,6 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		19EC59E2205C7048002F59BD /* Carthage Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTeeth.framework",
-			);
-			name = "Carthage Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -424,12 +407,12 @@
 /* Begin PBXTargetDependency section */
 		19270A8D2065764200A178F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
+			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */;
 			targetProxy = 19270A8C2065764200A178F6 /* PBXContainerItemProxy */;
 		};
 		19EC59B4205C6A39002F59BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth */;
+			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */;
 			targetProxy = 19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -468,6 +451,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -475,6 +459,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -528,6 +513,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -535,6 +521,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -570,6 +557,7 @@
 		19EC59BD205C6A39002F59BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -583,9 +571,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robotpajamas.RxSwiftyTeeth;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
+				PRODUCT_NAME = RxSwiftyTeeth;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,6 +584,7 @@
 		19EC59BE205C6A39002F59BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -608,9 +598,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robotpajamas.RxSwiftyTeeth;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
+				PRODUCT_NAME = RxSwiftyTeeth;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -697,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth" */ = {
+		19EC59BC205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19EC59BD205C6A39002F59BD /* Debug */,

@@ -1,2 +1,2 @@
-github "RobotPajamas/SwiftyTeeth" "develop"
-github "ReactiveX/RxSwift" ~> 4.1.2
+github "RobotPajamas/SwiftyTeeth" ~> 0.4
+github "ReactiveX/RxSwift" ~> 4.1
