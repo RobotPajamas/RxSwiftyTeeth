@@ -55,12 +55,12 @@ final class DeviceViewModel: ViewModelType {
             .do(onNext: { (isConnected) in
                 self.screenLogger.printUi("App: Device is connected? \(isConnected)")
             })
-            .filter { $0 == true } // On each reconnection, re-discover services/characteristics
-            .flatMap { (_) -> Observable<[CBService]> in
+            .filter { $0 == .connected } // On each reconnection, re-discover services/characteristics
+            .flatMap { (_) -> Observable<[Service]> in
                 self.screenLogger.printUi("App: Starting service discovery...")
                 return peripheral.rx.discoverServices()
             }
-            .flatMap({ (services) -> Observable<CBService> in
+            .flatMap({ (services) -> Observable<Service> in
                 Observable.from(services)
             })
             .flatMap({ (service) -> Observable<DiscoveredCharacteristic> in
@@ -70,19 +70,19 @@ final class DeviceViewModel: ViewModelType {
         
         let readRequest = input.readTapped
             .flatMapFirst({ (_) -> Driver<Data> in
-                return peripheral.rx.read(from: "2a24", in: "180a")
+                return peripheral.rx.read(from: UUID(uuidString: "2a24")!, in: UUID(uuidString: "180a")!)
                     .asDriver(onErrorJustReturn: Data())
             })
         
         let writeRequest = input.writeTapped
             .flatMapFirst({ (_) -> Driver<Void> in
-                return peripheral.rx.write(data: Data(), to: "", in: "")
+                return peripheral.rx.write(data: Data(), to: UUID(uuidString: "")!, in: UUID(uuidString: "")!)
                     .asDriver(onErrorJustReturn: ())
             })
         
         let subscribeRequest = input.subscribeTapped
             .flatMapFirst({ (_) -> Driver<Data> in
-                return peripheral.rx.subscribe(to: "2a37", in: "180d")
+                return peripheral.rx.subscribe(to: UUID(uuidString: "2a24")!, in: UUID(uuidString: "180a")!)
                     .asDriver(onErrorJustReturn: Data())
             })
         
