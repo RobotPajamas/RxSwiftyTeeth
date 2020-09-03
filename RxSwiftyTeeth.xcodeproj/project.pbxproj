@@ -27,8 +27,7 @@
 		19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E4205C760F002F59BD /* DeviceListViewController.swift */; };
 		19EC59E7205C760F002F59BD /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E5205C760F002F59BD /* DeviceViewController.swift */; };
 		334028B7250096CD00F8F387 /* SwiftyTeeth+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334028B4250096CD00F8F387 /* SwiftyTeeth+Rx.swift */; };
-		334028B8250096CD00F8F387 /* RxSwiftyTeeth.h in Headers */ = {isa = PBXBuildFile; fileRef = 334028B5250096CD00F8F387 /* RxSwiftyTeeth.h */; };
-		334028B9250096CD00F8F387 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 334028B6250096CD00F8F387 /* Info.plist */; };
+		334028B8250096CD00F8F387 /* RxSwiftyTeeth.h in Headers */ = {isa = PBXBuildFile; fileRef = 334028B5250096CD00F8F387 /* RxSwiftyTeeth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,7 +295,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Robot Pajamas";
 				TargetAttributes = {
 					19EC59A7205C6A39002F59BD = {
@@ -342,7 +341,6 @@
 			files = (
 				19EC59DC205C6F8E002F59BD /* Cartfile in Resources */,
 				19EC59DB205C6F8E002F59BD /* Cartfile.resolved in Resources */,
-				334028B9250096CD00F8F387 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +581,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/RxSwiftyTeeth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 0.6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
@@ -611,7 +609,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/RxSwiftyTeeth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 0.6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
