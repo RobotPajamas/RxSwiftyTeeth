@@ -5,7 +5,6 @@
 //  Created by Suresh Joshi on 2018-03-16.
 //
 
-import CoreBluetooth
 import RxSwift
 import SwiftyTeeth
 
@@ -51,7 +50,7 @@ public extension Reactive where Base: SwiftyTeeth {
 
 public extension Reactive where Base: Device {
     
-    func connect() -> Observable<Bool> {
+    func connect() -> Observable<ConnectionState> {
         return Observable.create({ (observer) -> Disposable in
             self.base.connect(complete: { (isConnected) in
                 observer.onNext(isConnected)
@@ -71,7 +70,7 @@ public extension Reactive where Base: Device {
 //        })
 //    }
     
-    func discoverServices(with uuids: [CBUUID]? = nil) -> Observable<[CBService]> {
+    func discoverServices(with uuids: [UUID]? = nil) -> Observable<[Service]> {
         return Observable.create({ (observer) -> Disposable in
             self.base.discoverServices(with: uuids, complete: { (result) in
                 switch result {
@@ -89,7 +88,7 @@ public extension Reactive where Base: Device {
         })
     }
     
-    func discoverCharacteristics(with uuids: [CBUUID]? = nil, for service: CBService) -> Observable<DiscoveredCharacteristic> {
+    func discoverCharacteristics(with uuids: [UUID]? = nil, for service: Service) -> Observable<DiscoveredCharacteristic> {
         return Observable.create({ (observer) -> Disposable in
             self.base.discoverCharacteristics(with: uuids, for: service, complete: { (result) in
                 switch result {
@@ -108,7 +107,7 @@ public extension Reactive where Base: Device {
     }
     
     // Maybe this should be a Single/Completable vs Observable? 
-    func read(from characteristic: String, in service: String) -> Observable<Data> {
+    func read(from characteristic: UUID, in service: UUID) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
             self.base.read(from: characteristic, in: service, complete: { (result) in
                 switch result {
@@ -128,7 +127,7 @@ public extension Reactive where Base: Device {
     
     // TODO: Handle write-no-response
     // Should be Single<>?
-    func write(data: Data, to characteristic: String, in service: String) -> Observable<Void> {
+    func write(data: Data, to characteristic: UUID, in service: UUID) -> Observable<Void> {
         return Observable.create({ (observer) -> Disposable in
             self.base.write(data: data, to: characteristic, in: service, complete: { (result) in
                 switch result {
@@ -145,7 +144,7 @@ public extension Reactive where Base: Device {
         })
     }
     
-    func subscribe(to characteristic: String, in service: String) -> Observable<Data> {
+    func subscribe(to characteristic: UUID, in service: UUID) -> Observable<Data> {
         return Observable.create({ (observer) -> Disposable in
             self.base.subscribe(to: characteristic, in: service, complete: { (result) in
                 switch result {
