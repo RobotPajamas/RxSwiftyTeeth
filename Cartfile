@@ -1,2 +1,2 @@
-github "RobotPajamas/SwiftyTeeth" ~> 0.5
-github "ReactiveX/RxSwift" ~> 5.0
+github "RobotPajamas/SwiftyTeeth" ~> 0.7
+github "ReactiveX/RxSwift" ~> 5.1
