@@ -5,8 +5,10 @@
 //  Created by Suresh Joshi on 2018-03-16.
 //
 
+import Foundation
 import RxSwift
 import SwiftyTeeth
+
 
 public extension Reactive where Base: SwiftyTeeth {
     
