@@ -16,7 +16,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-
 import PackageDescription
 
 let package = Package(
@@ -30,7 +29,7 @@ let package = Package(
     products: [
         .library(
             name: "RxSwiftyTeeth",
-            targets: ["RxSwiftyTeeth"]),
+            targets: ["RxSwiftyTeeth"])
     ],
     dependencies: [
         .package(url: "https://github.com/RobotPajamas/SwiftyTeeth.git", from: "0.8.0"),
@@ -39,6 +38,6 @@ let package = Package(
     targets: [
         .target(
             name: "RxSwiftyTeeth",
-            dependencies: ["RxSwift", "SwiftyTeeth"]),
+            dependencies: ["RxSwift", "SwiftyTeeth"])
     ]
 )

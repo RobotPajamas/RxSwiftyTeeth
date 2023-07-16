@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
         // Override point for customization after application launch.
         return true
     }
@@ -41,23 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-//    private class MyLogger: Logger {
-//        func verbose(_ message: String) {
-//            print("V: " + message)
-//        }
-//        func debug(_ message: String) {
-//            print("D: " + message)
-//        }
-//        func info(_ message: String) {
-//            print("I: " + message)
-//        }
-//        func warning(_ message: String) {
-//            print("W: " + message)
-//        }
-//        func error(_ message: String) {
-//            print("E: " + message)
-//        }
-//    }
+    //    private class MyLogger: Logger {
+    //        func verbose(_ message: String) {
+    //            print("V: " + message)
+    //        }
+    //        func debug(_ message: String) {
+    //            print("D: " + message)
+    //        }
+    //        func info(_ message: String) {
+    //            print("I: " + message)
+    //        }
+    //        func warning(_ message: String) {
+    //            print("W: " + message)
+    //        }
+    //        func error(_ message: String) {
+    //            print("E: " + message)
+    //        }
+    //    }
 
 }
-
