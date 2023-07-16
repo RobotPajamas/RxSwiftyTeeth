@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,14 +14,10 @@
 		19270A88206575D900A178F6 /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
 		19270A8A2065764200A178F6 /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
 		19270A8B2065764200A178F6 /* RxSwiftyTeeth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */; };
-		19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */; };
 		19EC59C9205C6BD9002F59BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59C8205C6BD9002F59BD /* AppDelegate.swift */; };
 		19EC59CE205C6BD9002F59BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59CC205C6BD9002F59BD /* Main.storyboard */; };
 		19EC59D0205C6BD9002F59BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59CF205C6BD9002F59BD /* Assets.xcassets */; };
 		19EC59D3205C6BD9002F59BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59D1205C6BD9002F59BD /* LaunchScreen.storyboard */; };
-		19EC59DB205C6F8E002F59BD /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59D9205C6F8E002F59BD /* Cartfile.resolved */; };
-		19EC59DC205C6F8E002F59BD /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 19EC59DA205C6F8E002F59BD /* Cartfile */; };
 		19EC59DF205C7024002F59BD /* SwiftyTeeth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59DE205C7024002F59BD /* SwiftyTeeth.framework */; };
 		19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EC59E0205C7027002F59BD /* RxSwift.framework */; };
 		19EC59E6205C760F002F59BD /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC59E4205C760F002F59BD /* DeviceListViewController.swift */; };
@@ -32,13 +28,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		19270A8C2065764200A178F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 19EC599F205C6A39002F59BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19EC59A7205C6A39002F59BD;
-			remoteInfo = RxSwiftyTeeth;
-		};
-		19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19EC599F205C6A39002F59BD /* Project object */;
 			proxyType = 1;
@@ -66,9 +55,6 @@
 		19270A7F2065400300A178F6 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		19270A812065753A00A178F6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../../ACS/acs-emu-ios/Carthage/Build/iOS/RxCocoa.framework"; sourceTree = "<group>"; };
 		19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftyTeeth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19EC59B1205C6A39002F59BD /* RxSwiftyTeeth Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSwiftyTeeth Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftyTeeth_Tests.swift; sourceTree = "<group>"; };
-		19EC59B8205C6A39002F59BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19EC59C6205C6BD9002F59BD /* RxSwiftyTeeth Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwiftyTeeth Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EC59C8205C6BD9002F59BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19EC59CD205C6BD9002F59BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +70,9 @@
 		334028B4250096CD00F8F387 /* SwiftyTeeth+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftyTeeth+Rx.swift"; sourceTree = "<group>"; };
 		334028B5250096CD00F8F387 /* RxSwiftyTeeth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxSwiftyTeeth.h; sourceTree = "<group>"; };
 		334028B6250096CD00F8F387 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33854DC52A646BE200D40FAD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		33854DC62A646BE200D40FAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		33854DC72A646BE200D40FAD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +82,6 @@
 			files = (
 				19EC59DF205C7024002F59BD /* SwiftyTeeth.framework in Frameworks */,
 				19EC59E1205C7027002F59BD /* RxSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		19EC59AE205C6A39002F59BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19EC59B2205C6A39002F59BD /* RxSwiftyTeeth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,9 +110,8 @@
 		19EC599E205C6A39002F59BD = {
 			isa = PBXGroup;
 			children = (
-				19EC59D8205C6F74002F59BD /* Meta */,
+				19EC59D8205C6F74002F59BD /* Metadata */,
 				19EC59AA205C6A39002F59BD /* Sources */,
-				19EC59B5205C6A39002F59BD /* RxSwiftyTeeth Tests */,
 				19EC59C7205C6BD9002F59BD /* RxSwiftyTeeth Sample */,
 				19EC59A9205C6A39002F59BD /* Products */,
 				19EC59DD205C7024002F59BD /* Frameworks */,
@@ -142,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */,
-				19EC59B1205C6A39002F59BD /* RxSwiftyTeeth Tests.xctest */,
 				19EC59C6205C6BD9002F59BD /* RxSwiftyTeeth Sample.app */,
 			);
 			name = Products;
@@ -154,15 +133,6 @@
 				334028B3250096CD00F8F387 /* RxSwiftyTeeth */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		19EC59B5205C6A39002F59BD /* RxSwiftyTeeth Tests */ = {
-			isa = PBXGroup;
-			children = (
-				19EC59B6205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift */,
-				19EC59B8205C6A39002F59BD /* Info.plist */,
-			);
-			path = "RxSwiftyTeeth Tests";
 			sourceTree = "<group>";
 		};
 		19EC59C7205C6BD9002F59BD /* RxSwiftyTeeth Sample */ = {
@@ -179,13 +149,16 @@
 			path = "RxSwiftyTeeth Sample";
 			sourceTree = "<group>";
 		};
-		19EC59D8205C6F74002F59BD /* Meta */ = {
+		19EC59D8205C6F74002F59BD /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				33854DC52A646BE200D40FAD /* LICENSE */,
+				33854DC72A646BE200D40FAD /* Package.swift */,
+				33854DC62A646BE200D40FAD /* README.md */,
 				19EC59DA205C6F8E002F59BD /* Cartfile */,
 				19EC59D9205C6F8E002F59BD /* Cartfile.resolved */,
 			);
-			name = Meta;
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 		19EC59DD205C7024002F59BD /* Frameworks */ = {
@@ -250,24 +223,6 @@
 			productReference = 19EC59A8205C6A39002F59BD /* RxSwiftyTeeth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		19EC59B0205C6A39002F59BD /* RxSwiftyTeeth Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 19EC59BF205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth Tests" */;
-			buildPhases = (
-				19EC59AD205C6A39002F59BD /* Sources */,
-				19EC59AE205C6A39002F59BD /* Frameworks */,
-				19EC59AF205C6A39002F59BD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				19EC59B4205C6A39002F59BD /* PBXTargetDependency */,
-			);
-			name = "RxSwiftyTeeth Tests";
-			productName = RxSwiftyTeethTests;
-			productReference = 19EC59B1205C6A39002F59BD /* RxSwiftyTeeth Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		19EC59C5205C6BD9002F59BD /* RxSwiftyTeeth Sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19EC59D5205C6BD9002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth Sample" */;
@@ -294,17 +249,14 @@
 		19EC599F205C6A39002F59BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Robot Pajamas";
 				TargetAttributes = {
 					19EC59A7205C6A39002F59BD = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					19EC59B0205C6A39002F59BD = {
-						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 					19EC59C5205C6BD9002F59BD = {
@@ -328,7 +280,6 @@
 			projectRoot = "";
 			targets = (
 				19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */,
-				19EC59B0205C6A39002F59BD /* RxSwiftyTeeth Tests */,
 				19EC59C5205C6BD9002F59BD /* RxSwiftyTeeth Sample */,
 			);
 		};
@@ -336,15 +287,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		19EC59A6205C6A39002F59BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19EC59DC205C6F8E002F59BD /* Cartfile in Resources */,
-				19EC59DB205C6F8E002F59BD /* Cartfile.resolved in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		19EC59AF205C6A39002F59BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,14 +334,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19EC59AD205C6A39002F59BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19EC59B7205C6A39002F59BD /* RxSwiftyTeeth_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		19EC59C2205C6BD9002F59BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,11 +353,6 @@
 			isa = PBXTargetDependency;
 			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */;
 			targetProxy = 19270A8C2065764200A178F6 /* PBXContainerItemProxy */;
-		};
-		19EC59B4205C6A39002F59BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 19EC59A7205C6A39002F59BD /* RxSwiftyTeeth iOS */;
-			targetProxy = 19EC59B3205C6A39002F59BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -472,6 +401,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -498,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -534,6 +464,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -554,10 +485,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -575,15 +507,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/RxSwiftyTeeth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.7.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
 				PRODUCT_NAME = RxSwiftyTeeth;
 				SKIP_INSTALL = YES;
@@ -603,47 +542,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/RxSwiftyTeeth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.7.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-iOS";
 				PRODUCT_NAME = RxSwiftyTeeth;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		19EC59C0205C6A39002F59BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RxSwiftyTeethTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robotpajamas.RxSwiftyTeethTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		19EC59C1205C6A39002F59BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RxSwiftyTeethTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robotpajamas.RxSwiftyTeethTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -660,8 +578,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "RxSwiftyTeeth Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -681,8 +603,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "RxSwiftyTeeth Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robotpajamas.RxSwiftyTeeth-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -707,15 +633,6 @@
 			buildConfigurations = (
 				19EC59BD205C6A39002F59BD /* Debug */,
 				19EC59BE205C6A39002F59BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		19EC59BF205C6A39002F59BD /* Build configuration list for PBXNativeTarget "RxSwiftyTeeth Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				19EC59C0205C6A39002F59BD /* Debug */,
-				19EC59C1205C6A39002F59BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

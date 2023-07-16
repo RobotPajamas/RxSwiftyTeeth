@@ -1,28 +1,42 @@
-// swift-tools-version:5.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.8
+
+// Copyright (c) 2023 Robot Pajamas
+
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 
 import PackageDescription
 
 let package = Package(
     name: "RxSwiftyTeeth",
     platforms: [
-        .macOS(.v10_14),
-        .iOS(.v10),
+        .iOS(.v13),
+        .macOS(.v10_15),
+        .tvOS(.v13),
+        .watchOS(.v6),
     ],
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "RxSwiftyTeeth",
             targets: ["RxSwiftyTeeth"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/RobotPajamas/SwiftyTeeth.git", from: "0.7.0"),
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "5.1.0"),
+        .package(url: "https://github.com/RobotPajamas/SwiftyTeeth.git", from: "0.8.0"),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.0.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "RxSwiftyTeeth",
             dependencies: ["RxSwift", "SwiftyTeeth"]),
